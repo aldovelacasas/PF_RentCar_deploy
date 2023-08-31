@@ -2,7 +2,7 @@ import axios from "axios";
 import Buttons from "./buttons";
 
 async function loadProduct(productId){
-   const {data} = await axios.get("http://localhost:3000/api/products/" + productId)
+   const {data} = await axios.get(process.env.BASE_URL + "/api/products/" + productId)
    return data;
 }
 async function ProductPage({params}) {

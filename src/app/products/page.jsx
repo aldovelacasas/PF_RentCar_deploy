@@ -4,7 +4,7 @@ import axios from "axios"
 
 
 async function loadProducts(){
-    const {data}= await axios.get('http://localhost:3000/api/products')
+    const {data}= await axios.get(process.env.BASE_URL + "/api/products")
     return data
     // const result=await conn.query('SELECT * FROM product')
     // console.log(result);
